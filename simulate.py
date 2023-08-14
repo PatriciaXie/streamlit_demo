@@ -3,7 +3,7 @@ import math
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
-plt.rc("font", family='MicroSoft YaHei', weight="bold")
+# plt.rc("font", family='MicroSoft YaHei', weight="bold")
 
 # 参数输入
 st.title('制导Demo')
@@ -71,7 +71,7 @@ for N in Ns:
 fig, axs = plt.subplots(2, 1)  # 创建画布与子图
 
 ax = axs[0]
-ax.set_title('轨迹m')
+ax.set_title('Trajectory')
 ax.set_xlabel('x (m)')
 ax.set_ylabel('y (m)')
 ax.axis('equal')
@@ -82,9 +82,9 @@ for i in range(count):
 ax.legend(Ns)
 
 ax = axs[1]
-ax.set_title('过载曲线')
-ax.set_xlabel('时间 (s)')
-ax.set_ylabel('过载 (m/s^2)')
+ax.set_title('Acceleration')
+ax.set_xlabel('time (s)')
+ax.set_ylabel('command (m/s^2)')
 for i in range(count):
     x_data = t_all[i]
     y_data = command_all[i]
